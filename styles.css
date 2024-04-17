@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: "Alata";
+}
+
+/* variables */
+/* mixins */
+/* styles */
+.container {
+  display: block;
+  margin: 0px 20px;
+}
+
+.parent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wave-card {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  box-shadow: 11px 17px 48px #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.wave-card-shape {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+  opacity: 0.6;
+  top: -250px;
+  left: -100px;
+  border-radius: 150px;
+  background: #580451;
+  animation: rotate 30s linear infinite;
+}
+.wave-card-shape:nth-child(1) {
+  top: -245px;
+  left: -98px;
+  opacity: 0.4;
+  z-index: 2;
+  animation: rotate 25s linear infinite;
+}
+.wave-card-shape:nth-child(2) {
+  top: -240px;
+  opacity: 0.3;
+  z-index: 3;
+  animation: rotate 32s linear infinite;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+/*personlizar  css 
+las clases inician con punto y se separa por guion no espacios*/
+.profile-image{
+z-index: 4; /*eje z la posición por capas*/
+
+}
+.profile-image img{
+width: 125px;
+height: 125px;
+border-radius: 50%;
+border: 2px solid rgba(139, 219, 20, 0) ;
+}
+.contact-icons{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+  column-gap: 15px;
+}
+
+.contact-icons a{
+  font-size: 20;
+}
+
+.contact-icons a.wa:hover{
+  color:green;
+}
+
+.contact-icons a.mail:hover{
+  color:blue;
+}
+
+.contact-icons a.tel:hover{
+  color: black;
+}
+
+.contact-icons a.hb:hover{
+  color: gray;
+}
